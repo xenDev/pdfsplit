@@ -44,10 +44,10 @@ logging.debug("Suffix is " + suffix)
 #Get the file basename
 inputFileBase = os.path.splitext(inputFile)[0]
 for i in range(len(splitlist)-1):
-    logging.debug("Starting with page: " + str(splitlist[i]))
+    logging.debug("Starting with page: " + str(splitlist[i]+1))
     outputWriter=PdfFileWriter()
     for j in range(splitlist[i], splitlist[i+1]):
-        logging.debug("Adding page " + str(j))
+        logging.debug("Adding page " + str(j+1))
         outputWriter.addPage(inputReader.getPage(j))
     outputFileName= inputFileBase + '-' + suffix + str(i+1) + ".pdf"
     logging.info("Writing to file " + outputFileName)
