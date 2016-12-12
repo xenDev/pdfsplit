@@ -31,7 +31,7 @@ if args['list']:
     #Append the last page
     splitlist.append(numberOfPages)
 else:
-    splitlist=list(range(0,numberOfPages))
+    splitlist=list(range(0,numberOfPages+1))
 
 logging.debug("Split list is :")
 logging.debug(pprint.pformat(splitlist))
